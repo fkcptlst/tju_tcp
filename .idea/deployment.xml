@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Remote Host client (c9647761-5b65-4ee9-b4bd-4a386dca9bb0)" deleteMissingItems="true" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Remote Host client (c9647761-5b65-4ee9-b4bd-4a386dca9bb0)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tju_tcp" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
