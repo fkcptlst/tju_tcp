@@ -18,14 +18,14 @@
 
 #include <signal.h>
 
-//#define TraceableInfoON
+#define TraceableInfoON
 #include "debug.h"
 
 #include <sched.h>
 
 uint32_t RETRANS;
-#define min(x,y) x<y?x:y
-#define max(x,y) x>y?x:y
+#define min(x,y) (x<y?x:y)
+#define max(x,y) (x>y?x:y)
 // 单位是byte
 #define SIZE32 4
 #define SIZE16 2
@@ -164,7 +164,7 @@ typedef struct tju_tcp_t{
     // only for listening socket, 只对于监听接口有用
     tju_tcp_socks_queue_t socket_queue;
 
-	struct timeval sendtime_hash[1024];
+	// struct timeval sendtime_hash[1024];
 } tju_tcp_t;
 
 #endif

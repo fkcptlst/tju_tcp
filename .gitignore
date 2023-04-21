@@ -1,0 +1,5 @@
+test
+.idea
+build
+*.o
+*/*.o

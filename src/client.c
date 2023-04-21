@@ -10,7 +10,7 @@
 //     startSimulation();
 //
 //     log_fp = NULL;
-//     log_fp = fopen("/vagrant/tju_tcp/test/client.event.log", "w");
+//     log_fp = fopen("/vagrant/tju_tcp/test/client.event.trace", "w");
 //     Assert(log_fp != NULL, "Error opening log file\n");
 //
 //     tju_tcp_t* my_socket = tju_socket();
@@ -62,15 +62,18 @@
 #define MAXSIZE 50*MIN_LEN*MIN_LEN
 
 // 全局变量
-int t_times = 5000;
+int t_times = 1;
 
 void sleep_no_wake(int sec){
     do{
         sec =sleep(sec);
+        FlushPrint("sleep interrupted, remaining sec: %d\n",sec);
     }while(sec > 0);
+    FlushPrint("sleep finished\n");
 }
 
 int main(int argc, char **argv) {
+
     // 开启仿真环境
     startSimulation();
 
@@ -86,6 +89,7 @@ int main(int argc, char **argv) {
 
     int fd =  open("./rdt_send_file.txt",O_RDWR);
     if(-1 == fd) {
+        perror("open file error");
         return 1;
     }
     struct stat st;
@@ -139,6 +143,8 @@ int main(int argc, char **argv) {
 
     free(file_buf);
 
+    sleep_no_wake(2);
+    tju_close(my_socket);
     sleep_no_wake(10000);
 
     return EXIT_SUCCESS;

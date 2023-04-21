@@ -6,6 +6,7 @@
 #include "kernel.h"
 
 extern FILE *log_fp;
+
 /*
 创建 TCP socket 
 初始化对应的结构体

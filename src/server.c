@@ -9,7 +9,7 @@
 //     startSimulation();
 //
 //     log_fp = NULL;
-//     log_fp = fopen("/vagrant/tju_tcp/test/server.event.log", "w");
+//     log_fp = fopen("/vagrant/tju_tcp/test/server.event.trace", "w");
 //     Assert(log_fp != NULL, "Error opening log file\n");
 //
 //     tju_tcp_t* my_server = tju_socket();
@@ -150,7 +150,7 @@ int main(int argc, char **argv) {
         if(print_s+EACHSIZE <= alllen){
             char tmpbuf[EACHSIZE] = {'\0'};
             memcpy(tmpbuf, allbuf+print_s, EACHSIZE);
-//            printf("[RDT TEST] server recv %s\n", tmpbuf);
+        //    printf("[RDT TEST] server recv %s\n", tmpbuf);
 
 //            if(alllen % (EACHSIZE*100) == 0) {
 //                FlushPrint("[RDT SERVER] recv begin:\n");
@@ -161,8 +161,8 @@ int main(int argc, char **argv) {
 //                        if(tmpbuf[i] == '\0')
 //                            FlushPrint(L_GREEN("it's null"));
 //                    }
-//
-////                    FlushPrint("%c", tmpbuf[i]);
+
+// //                    FlushPrint("%c", tmpbuf[i]);
 //                }
 //                FlushPrint("[RDT SERVER] recv end\n");
 //            }

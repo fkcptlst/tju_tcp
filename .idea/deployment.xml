@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="Remote Host client (c9647761-5b65-4ee9-b4bd-4a386dca9bb0)" deleteMissingItems="true" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Remote Development" deleteMissingItems="true" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeDeletion="false" autoUploadExternalChanges="true">
+    <option name="confirmBeforeDeletion" value="false" />
     <serverData>
-      <paths name="Remote Host client (c9647761-5b65-4ee9-b4bd-4a386dca9bb0)">
+      <paths name="Remote Host MiniMIPS (7aace40c-abc2-4a90-b78c-1bec232d8935)">
         <serverdata>
           <mappings>
             <mapping deploy="/tmp/tju_tcp" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Remote Host client (c9647761-5b65-4ee9-b4bd-4a386dca9bb0)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/tju_tcp" local="$PROJECT_DIR$" web="///" />
           </mappings>
         </serverdata>
       </paths>

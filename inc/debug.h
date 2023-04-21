@@ -162,7 +162,7 @@ extern FILE *log_fp;
 		fflush(stdout);                                       \
 	} while (0)
 
-//#ifdef DEBUG_ON
+// #ifdef DEBUG_ON
 //#define DEBUG(content) \
 //	do                 \
 //	{                  \

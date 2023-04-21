@@ -26,8 +26,8 @@ int addTimeHeader(char *const buffer) // input output buffer, ptr should not be 
     do                                                             \
     {                                                              \
         char logBuffer[1024] = {0};                                \
-        strcat(logBuffer, "[SEND] ");                                    \
-        addTimeHeader(logBuffer);                                  \
+        addTimeHeader(logBuffer);                                 \
+        strcat(logBuffer, "[SEND] ");                                \
         fflush(stdout);                                            \
         fprintf(stdout, BG_L_BLUE(L_YELLOW(BOLD("[ SEND LOG ]")))); \
         PRINT_UTIL_TRACEBACK_STDOUT                                \
@@ -41,9 +41,9 @@ int addTimeHeader(char *const buffer) // input output buffer, ptr should not be 
     #define RECVLog(format, ...)                                      \
     do                                                             \
     {                                                              \
-        char logBuffer[1024] = {0};                                \
-        strcat(logBuffer, "[RECV] ");                                    \
-        addTimeHeader(logBuffer);                                  \
+        char logBuffer[1024] = {0};                              \
+        addTimeHeader(logBuffer);                                \
+        strcat(logBuffer, "[RECV] ");                                 \
         fflush(stdout);                                            \
         fprintf(stdout, BG_L_BLUE(L_YELLOW(BOLD("[ RECV LOG ]")))); \
         PRINT_UTIL_TRACEBACK_STDOUT                                \
